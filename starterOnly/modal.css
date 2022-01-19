@@ -304,7 +304,7 @@ input[data-error]::after {
   height: 32px;
   opacity: 1;
   cursor: pointer;
-  transform: scale(0.7);
+  transform: scale(0.7); 
 }
 .close:before,
 .close:after {
