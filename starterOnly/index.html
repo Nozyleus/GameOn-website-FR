@@ -71,6 +71,8 @@
                   id="first"
                   name="first"
                   minlength="2"
+                  pattern="[a-z]"
+                  required
                 /><br>
               </div>
               <div
@@ -81,6 +83,9 @@
                   type="text"
                   id="last"
                   name="last"
+                  minlength="2"
+                  pattern="[a-z]"
+                  required
                 /><br>
               </div>
               <div
@@ -91,6 +96,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
                 /><br>
               </div>
               <div
@@ -101,12 +107,13 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  required
                 /><br>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" pattern="[0-99]" required>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -208,6 +215,12 @@
             </form>
           </div>
         </div>
+      </div>
+      <div class="container_thanks">
+        <form>
+          <p class="text_thanks">Merci ! Votre réservation a été reçue.</p>
+          <button class="btn_thanks">OK</button>
+        </form>
       </div>
     </main>
     <footer>
