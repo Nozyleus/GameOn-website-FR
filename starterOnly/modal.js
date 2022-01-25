@@ -32,3 +32,11 @@ function modalFinal() {
 }
 
 
+// Close modal thanks
+const modalthks = document.querySelector(".back_ground_thanks")
+const btnThanks = document.querySelectorAll(".btn_thanks");
+btnThanks.forEach((button) => button.addEventListener("click", modalThanks));
+function modalThanks() {
+  modalthks.style.display ="none";
+}
+

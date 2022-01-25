@@ -157,31 +157,6 @@ main {
   font-size: 16px;
 }
 
-/*modal of thanks*/
-
-.container_thanks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  border-radius: 25px;
-  height: 300px;
-}
-
-.text_thanks {
-  color: white;
-}
-
-.btn_thanks {
-  font-size: 20px;
-  width: 25%;
-  padding: 10px;
-  background-color: #fe142f;
-  border-radius: 20px;
-  outline: none;
-  cursor: pointer;
-  margin: 0 36%;
-}
 
 .bground {
   display: none;
@@ -213,7 +188,6 @@ main {
   padding: 15px 8%;
   margin: 15px auto;
 }
-
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -251,6 +225,48 @@ input {
 }
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
+}
+
+/*modal of thanks*/
+
+.back_ground_thanks {
+  background-color: rgba(27, 26, 29, 0.876);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: fixed;
+  display: none;
+}
+
+.container_thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border-radius: 25px;
+  width: 50%;
+  height: 350px;
+  margin: 25% 25%;
+}
+
+.text_thanks {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn_thanks {
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  background-color: #fe142f;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  margin:0 90px;
+  margin-top: 90px;
 }
 /* 
 input[data-error]::after {
