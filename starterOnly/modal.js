@@ -40,7 +40,7 @@ btnThanks.forEach((button) => button.addEventListener("click", modalThanks));
 function modalThanks() {
   modalthks.style.display ="none";
 }
-
+    //****************VALIDATION MODAL******************* */
 //validation first name************************
 form.first.addEventListener('change', function(){
   validFirst(this);
@@ -51,7 +51,12 @@ const validFirst = function(inputFirst){
     '^[a-z]{2,99}$','g'
   );
   let testFirst = firstRegExp.test(inputFirst.value)
-
+  let small = inputFirst.nextElementSibliing;
+    if(testFirst) {
+      small.innerHTML = '';
+    } else {
+      small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom'
+    }
 };
 
 //validation last name*************************
