@@ -42,20 +42,22 @@ function modalThanks() {
 }
     //****************VALIDATION MODAL******************* */
 //validation first name************************
+
 form.first.addEventListener('change', function(){
   validFirst(this);
 });
 
 const validFirst = function(inputFirst){
   let firstRegExp = new RegExp(
-    '^[a-z]{2,99}$','g'
+    '^[a-z]{2,99}$',
   );
   let testFirst = firstRegExp.test(inputFirst.value)
-  let small = inputFirst.nextElementSibliing;
+  let small = document.querySelector('.small1');
     if(testFirst) {
-      small.innerHTML = '';
+      small.innerHTML = 'good';
     } else {
-      small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom'
+      
+      small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom';
     }
 };
 
@@ -66,10 +68,16 @@ form.last.addEventListener('change', function(){
 
 const validLast = function(inputLast){
   let lastRegExp = new RegExp(
-    '^[a-z]{2,99}$','g'
+    '^[a-z]{2,99}$',
   );
   let testLast = lastRegExp.test(inputLast.value)
-console.log(testLast);
+  let small = document.querySelector('.small2');
+  if(testLast) {
+    small.innerHTML = 'good';
+  } else {
+    
+    small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom';
+  }
 };
 
 
@@ -80,9 +88,35 @@ form.email.addEventListener('change', function(){
 
 const validEmail = function(inputEmail){
   let emailRegExp = new RegExp(
-    '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$','g'
+    '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$',
   );
   let testEmail = emailRegExp.test(inputEmail.value)
+  let small = document.querySelector('.small3');
+  if(testEmail) {
+    small.innerHTML = 'good';
+  } else {
+    
+    small.innerHTML = 'Veuillez saisir un email correct';
+  }
+};
+
+//Date de naissance***************
+form.birthdate.addEventListener('change', function(){
+  validBirdth(this)
+});
+const validBirdth = function(inputBirdth){
+  console.log(inputBirdth.value)
+  let birdthRegExp = new RegExp ( 
+    '[0-9]{4}-[0-9]{2}-[0-9]{2}'
+  );
+  let testBirdth = birdthRegExp.test(inputBirdth.value)
+  console.log(testBirdth)
+  let small = document.querySelector('.small4');
+  if(testBirdth) {
+    small.innerHTML = 'good';
+  } else {
+    small.innerHTML = 'Vous devez entrer votre date de naissance';
+  }
 
 };
 
@@ -93,21 +127,15 @@ form.quantity.addEventListener('change', function(){
 
 const validQuantity = function(inputQuantity){
   let quantityRegExp = new RegExp(
-    '^[0-9]{1,99}$','g'
+    '^[0-9]$',
   );
   let testQuantity = quantityRegExp.test(inputQuantity.value)
-    testQuantity
+  let small = document.querySelector('.small5');
+  if(testQuantity) {
+    small.innerHTML = 'good';
+  } else {
+    
+    small.innerHTML = 'Veuillez saisir un chiffre';
+  }
 };
-
-//choose location*************************
-form.location.addEventListener('change', function(){
-  validLocation(this);
-});
-
-const validLocation = function(inputLocation){
-  let locationRegExp = new RegExp(
-    '^[0-9]{1,99}$','g'
-  );
-  let testLocation = locationRegExp.test(inputLocation.value)
-    testLocation
-};
+ 

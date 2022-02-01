@@ -246,12 +246,16 @@ input {
   margin:0 90px;
   margin-top: 90px;
 }
-/* 
+
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
-} */
+} 
+small {
+  color: red;
+  font-size: 12px;
+}
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -591,6 +595,10 @@ footer {
     margin: 0 -25px -15px;
   }
 
+  main {
+    margin: 0;
+  }
+
   .main-navbar {
     margin-right: -10px;
     margin-top: 20px ;
@@ -600,7 +608,7 @@ footer {
     margin: 0 20px;
   }
   .hero-headline {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     white-space: normal;
     font-weight: bold;
   }
@@ -617,7 +625,7 @@ footer {
     padding: 12px 65px;
   }
   .copyrights {
-    margin: -10px;
+    margin: -110px;
     text-align: center;
   }
 
