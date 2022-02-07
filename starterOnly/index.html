@@ -57,8 +57,8 @@
               name="reserve"
               id="reserve"
               action="index.html"
-              method="get"
-              onsubmit="return validate();"
+              method="post"
+              
             >
               <div
                 class="formData">
@@ -110,7 +110,15 @@
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" pattern="[0-99]" required>
+                <input 
+                  type="number" 
+                  class="text-control" 
+                  id="quantity" 
+                  name="quantity" 
+                  min="1" 
+                  max="99" 
+                  pattern="[0-99]"
+                  />
                 <small class="small5"></small>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
@@ -182,31 +190,37 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <small class="small6"></small>
               </div>
-
-              <div
-                class="formData">
+              
+              <div class="formData">
                 <input
                   class="checkbox-input"
                   type="checkbox"
-                  id="checkbox1"
-                  checked
-                />
-                <label class="checkbox2-label" for="checkbox1" required>
-                  <span class="checkbox-icon"></span>
-                  J'ai lu et accepté les conditions d'utilisation.
-                </label>
-                <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
-                <label class="checkbox2-label" for="checkbox2">
-                  <span class="checkbox-icon"></span>
-                  Je souhaite être prévenu des prochains évènements.
-                </label>
-                <br>
-                <small class="small7"></small>
+                  id="checkbox-1"
+                  name="check"
+                  required
+                  
+                  />
+                  <label class="checkbox2-label" for="checkbox-1">
+                    <span class="checkbox-icon"></span>
+                      J'ai lu et accepté les conditions d'utilisation.
+                    </label>
+                    <br>
+                    <input 
+                      class="checkbox-input" 
+                      type="checkbox"
+                      id="checkbox-2"  
+                      name="check"
+                      
+                      />
+                      <label class="checkbox2-label" for="checkbox-2" >
+                        <span class="checkbox-icon"></span>
+                          Je souhaite être prévenu des prochains évènements.
+                      </label>
+                      <br>
+                      <small class="small6"></small>
               </div>
-              <input
+              <input 
                 class="btn-submit"
                 type="submit"
                 class="button"

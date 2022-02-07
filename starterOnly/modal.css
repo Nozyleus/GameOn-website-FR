@@ -208,30 +208,36 @@ input {
 /*modal of thanks*/
 
 .back_ground_thanks {
-  background-color: rgba(27, 26, 29, 0.876);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  position: fixed;
   display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
 }
 
 .container_thanks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  border-radius: 25px;
-  width: 50%;
-  height: 350px;
-  margin: 25% 25%;
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+  height: 750px;
 }
 
 .text_thanks {
   color: white;
   font-size: 20px;
+  margin: 200px 0px;
   text-align: center;
 }
 
@@ -240,11 +246,12 @@ input {
   font-size: 20px;
   width: 50%;
   background-color: #fe142f;
+  padding: 10px;
   border-radius: 20px;
   outline: none;
   cursor: pointer;
   margin:0 90px;
-  margin-top: 90px;
+  margin-top: 20px;
 }
 
 input[data-error]::after {
@@ -306,7 +313,7 @@ small {
 .checkbox2-label .checkbox-icon {
   border-radius: 4px;
   border: 0;
-  background: #c4c4c4;
+  background: #c7c1c1;
 }
 .checkbox2-label .checkbox-icon::after {
   width: 7px;
@@ -628,5 +635,8 @@ footer {
     margin: -110px;
     text-align: center;
   }
-
+.content {
+  margin: 0;
+  width: 82%;
+}
 } 
