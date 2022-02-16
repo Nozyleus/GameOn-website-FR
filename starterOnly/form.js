@@ -1,5 +1,4 @@
 
-
 //verifier la saisi du nom validation first name************************
 
 form.first.addEventListener('change', function(){
@@ -117,13 +116,14 @@ const validQuantity = function(inputQuantity){
 
 //VALIDATION MODAL, verifier si chaque input a été rempli correctement avant validation
 document.getElementById ("reserve").addEventListener("submit", function(e){
+  inputs.forEach(input => input.value = '')
   e.preventDefault();
   if  (validPrenom)
   if  (validNom)
   if  (validMail)
   if  (validAge)
   if  (validQuantite)
-    {
+  {
       modalnone();
       modalFinal();
     } else {

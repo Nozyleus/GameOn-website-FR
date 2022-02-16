@@ -24,6 +24,7 @@ const last = document.getElementById ('last');
 const email = document.getElementById ('email');
 const birthdate = document.getElementById ('birthdate');
 const quantity = document.getElementById('quantity');
+let inputs = document.querySelectorAll('.text-control');
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
