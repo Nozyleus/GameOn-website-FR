@@ -592,6 +592,10 @@ footer {
     display: block;
     text-align: left;
   }
+
+  footer {
+    margin-top: 100px;
+  }
 }
 
 

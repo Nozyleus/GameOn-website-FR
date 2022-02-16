@@ -120,13 +120,14 @@
             </div>
             <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
             <div
-              class="formData">
+              class="formData" >
               <input
                 class="checkbox-input"
                 type="radio"
                 id="location1"
                 name="location"
                 value="New York"
+                required
               />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
@@ -187,6 +188,7 @@
                 <span class="checkbox-icon"></span>
                 Portland</label
               >
+              <small class="smallradio"></small>
             </div>
             
             <div class="formData">
@@ -196,7 +198,7 @@
                 id="checkbox-1"
                 name="check"
                 required
-                
+                checked
                 />
                 <label class="checkbox2-label" for="checkbox-1">
                   <span class="checkbox-icon"></span>
@@ -208,14 +210,15 @@
                     type="checkbox"
                     id="checkbox-2"  
                     name="check"
-                    
+
                     />
                     <label class="checkbox2-label" for="checkbox-2" >
                       <span class="checkbox-icon"></span>
                         Je souhaite être prévenu des prochains évènements.
                     </label>
+                    
                     <br>
-                    <small class="small6"></small>
+                    
             </div>
             <input 
               class="btn-submit"
@@ -223,14 +226,13 @@
               class="button"
               value="C'est parti"
             />
+            <small class="small6"></small>
           </form>
         </div>
       </div>
     </div>
     <div class="back_ground_thanks">
       <div class="container_thanks">
-        <span class="close close-modal"></span>
-        
         <div class="thanks">
           <p class="text_thanks">Merci ! Pour votre inscription. <br> A bientot</p>
           <button class="btn_thanks">Fermer</button>

@@ -68,7 +68,7 @@ const validEmail = function(inputEmail){
     email.style.borderColor = 'white';
   } else {
     email.style.borderColor = 'red';
-    small.innerHTML = 'Veuillez saisir un email correct';
+    small.innerHTML = 'Veuillez saisir un email valide';
   }
 };
 
@@ -79,7 +79,7 @@ form.birthdate.addEventListener('change', function(){
 let validAge = false;
 const validBirdth = function(inputBirdth){
   let birdthRegExp = new RegExp ( 
-    '[0-9]{4}-[0-9]{2}-[0-9]{2}'
+    /^19[00-99]{2}|200[0-9]{1}-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/
   );
   let testBirdth = birdthRegExp.test(inputBirdth.value)
   let small = document.querySelector('.small4');
@@ -89,7 +89,7 @@ const validBirdth = function(inputBirdth){
     birthdate.style.borderColor = 'white';
   } else {
     birthdate.style.borderColor = 'red';
-    small.innerHTML = 'Vous devez entrer votre date de naissance';
+    small.innerHTML = 'Entrer une date valide';
   }
 
 };
@@ -105,9 +105,8 @@ const validQuantity = function(inputQuantity){
   );
   let testQuantity = quantityRegExp.test(inputQuantity.value);
   let small = document.querySelector('.small5');
-  
   if(testQuantity) {
-      validQuantite = true;
+    validQuantite = true;
     small.innerHTML = '';
     quantity.style.borderColor ='white';
   } else {
@@ -116,24 +115,19 @@ const validQuantity = function(inputQuantity){
   }
 };
 
-
 //VALIDATION MODAL, verifier si chaque input a été rempli correctement avant validation
 document.getElementById ("reserve").addEventListener("submit", function(e){
   e.preventDefault();
-  let small = document.querySelector ('.small6');
-      // Saisi des variables pour verification avant la validation  
-      if  (validPrenom)
-      if  (validNom)
-      if  (validMail)
-      if  (validAge)
-      if  (validQuantite)
-          {
-            //fermeture du formulaire
-            modalnone();
-            //ouverture de la modal de remerciement
-            modalFinal();
-              
-      } else {
-          small.innerHTML = 'Remplissez tout les champs du formulaire';
+  if  (validPrenom)
+  if  (validNom)
+  if  (validMail)
+  if  (validAge)
+  if  (validQuantite)
+    {
+      modalnone();
+      modalFinal();
+    } else {
+          
           }
-});
+  }
+);
